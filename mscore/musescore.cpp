@@ -814,6 +814,7 @@ MuseScore::MuseScore()
       fotoTools->setObjectName("foto-tools");
       fotoTools->addWidget(new AccessibleToolButton(fotoTools, getAction("fotomode")));
 
+     
       addToolBarBreak();
 
       //-------------------------------
@@ -3598,7 +3599,8 @@ AboutBoxDialog::AboutBoxDialog()
                               .arg(tr(   "Visit %1www.musescore.org%2 for new versions and more information.\n"
                                          "Support MuseScore with your %3donation%4.\n\n"
                                          "Copyright &copy; 1999-2017 Werner Schweer and Others.\n"
-                                         "Published under the GNU General Public License.")
+                                         "Published under the GNU General Public License. \n"
+                                         "Edited by Nicholas Ridley, Daniel Griessler, Guilherme Bueno Dorea, and Nabil Osorio.")
                                    .arg("<a href=\"http://www.musescore.org/\">")
                                    .arg("</a>")
                                    .arg("<a href=\"http://www.musescore.org/donate\">")
