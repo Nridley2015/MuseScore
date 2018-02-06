@@ -1,6 +1,13 @@
 ![MuseScore](mscore/data/musescore_logo_full.png)
  Music notation and composition software
 
+## Edited By
+
+* Nicholas Ridley
+* Daniel Griessler
+* Nabil Osorio
+* Guilherme Bueno Dorea
+
 [![Travis CI](https://secure.travis-ci.org/musescore/MuseScore.svg)](https://travis-ci.org/musescore/MuseScore)
 [![Appveyor](https://ci.appveyor.com/api/projects/status/bp3ww6v985i64ece/branch/master?svg=true)](https://ci.appveyor.com/project/MuseScore/musescore/branch/master)
 
