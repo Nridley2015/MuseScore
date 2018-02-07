@@ -3600,6 +3600,7 @@ AboutBoxDialog::AboutBoxDialog()
                                          "Support MuseScore with your %3donation%4.\n\n"
                                          "Copyright &copy; 1999-2017 Werner Schweer and Others.\n"
                                          "Published under the GNU General Public License. \n"
+					 "Group Name: The Musicians. \n"
                                          "Edited by Nicholas Ridley, Daniel Griessler, Guilherme Bueno Dorea, and Nabil Osorio.")
                                    .arg("<a href=\"http://www.musescore.org/\">")
                                    .arg("</a>")
