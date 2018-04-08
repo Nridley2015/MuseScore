@@ -146,9 +146,11 @@ Else can just download the latest source release tarball from https://github.com
     cd MuseScore-x.x.x
 
 ### Release Build
-To compile MuseScore, type:
+To compile MuseScore, type:.
 
-    make release
+    make revision
+    make 
+    sudo make install
 
 If something goes wrong, then remove the whole build subdirectory with `make clean` and start new with `make release`.
 
