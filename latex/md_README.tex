@@ -1,0 +1,127 @@
+ Music notation and composition software
+
+\subsection*{Edited By}
+
+
+\begin{DoxyItemize}
+\item Nicholas Ridley
+\item Daniel Griessler
+\item Nabil Osorio
+\item Guilherme Bueno Dorea
+\end{DoxyItemize}
+
+\href{https://travis-ci.org/musescore/MuseScore}{\tt } \href{https://ci.appveyor.com/project/MuseScore/musescore/branch/master}{\tt }
+
+\href{https://www.gnu.org/licenses/old-licenses/gpl-2.0.html}{\tt }
+
+Muse\+Score is an open source and free music notation software. For support, contribution, bug reports, visit \href{https://musescore.org}{\tt Muse\+Score.\+org}. Fork and make pull requests!
+
+\subsection*{Features}
+
+
+\begin{DoxyItemize}
+\item W\+Y\+S\+I\+W\+YG design, notes are entered on a \char`\"{}virtual notepaper\char`\"{}
+\item True\+Type font(s) for printing \& display allows for high quality scaling to all sizes
+\item easy \& fast note entry
+\item many editing functions
+\item Music\+X\+ML import/export
+\item Midi (S\+MF) import/export
+\item Muse\+Data import
+\item Midi input for note entry
+\item integrated sequencer and software synthesizer to play the score
+\item print or create pdf files
+\end{DoxyItemize}
+
+\subsection*{More info}
+
+
+\begin{DoxyItemize}
+\item \href{https://musescore.org}{\tt Muse\+Score Homepage}
+\item \href{https://musescore.org/en/developers-handbook/git-workflow}{\tt Muse\+Score Git workflow instructions}.
+\item \href{https://musescore.org/en/developers-handbook/compilation}{\tt How to compile Muse\+Score?}
+\end{DoxyItemize}
+
+\subsection*{License}
+
+Muse\+Score is licensed under G\+PL version 2.\+0. See L\+I\+C\+E\+N\+S\+E.\+G\+PL in the same directory.
+
+\subsection*{Packages}
+
+
+\begin{DoxyItemize}
+\item {\bfseries aeolus} Clone of \href{http://kokkinizita.linuxaudio.org/linuxaudio/aeolus/}{\tt Aeolus} Disabled by default in the stable releases. See \href{http://dev-list.musescore.org/Aeolus-Organ-Synth-td7578364.html}{\tt http\+://dev-\/list.\+musescore.\+org/\+Aeolus-\/\+Organ-\/\+Synth-\/td7578364.\+html} Kept as an example of how to integrate with a complex synthesizer.
+\item {\bfseries assets} Graphical assets, use them if you need a Muse\+Score icon. For logo, color etc... see \href{https://musescore.org/en/about/logos-and-graphics}{\tt https\+://musescore.\+org/en/about/logos-\/and-\/graphics}
+\item {\bfseries awl} Audio Widget Library, from the MusE project
+\item {\bfseries build} Utility files for build
+\item {\bfseries bww2mxml} Command line tool to convert B\+WW files to Music\+X\+ML. B\+WW parser is used by Muse\+Score to import B\+WW files.
+\item {\bfseries demos} A few Muse\+Score files to demonstrate what can be done
+\item {\bfseries fluid} Clone of \href{https://sourceforge.net/projects/fluidsynth/}{\tt Fluid\+Synth}, ported to C++ and customized
+\item {\bfseries fonts} Contains fontforge source (sfd) + ttf/otf fonts. Muse\+Score includes the \char`\"{}\+Emmentaler\char`\"{} font from the Lilypond project.
+\item {\bfseries libmscore} Data model of Muse\+Score
+\item {\bfseries mscore} Main code for the Muse\+Score UI
+\item {\bfseries msynth} Abstract interface to Fluid + Aeolus
+\item {\bfseries mtest} Unit testing using Q\+Test
+\item {\bfseries omr} Optical music recognition
+\item {\bfseries share} Files moved to /usr/share/... on install
+\item {\bfseries test} Old tests. Should move to mtest
+\item {\bfseries vtest} Visual tests. Compare reference images with current implementation
+\item {\bfseries thirdparty} Contains projects which are included for convenience, usually to integrate them into the build system to make them available for all supported platforms.
+\begin{DoxyItemize}
+\item {\bfseries thirdparty/rtf2html} Used for capella import
+\item {\bfseries thirdparty/diff} Not used currently. \href{https://code.google.com/p/google-diff-match-patch/}{\tt Diff, Match and Patch Library}
+\item {\bfseries thirdparty/ofqf} O\+SC server interface. Based on \href{http://www.arnoldarts.de/projects/ofqf/}{\tt O\+SC for Qt4}
+\item {\bfseries thirdparty/singleapp} Clone from \href{https://github.com/qtproject/qt-solutions/tree/master/qtsingleapplication}{\tt Qt Single Application}
+\item {\bfseries thirdparty/portmidi} Clone from \href{https://sourceforge.net/projects/portmedia/}{\tt Port\+Midi}
+\item {\bfseries thirdparty/beatroot} It\textquotesingle{}s a core part of Beat\+Root Vamp Plugin by Simon Dixon and Chris Cannam, used in M\+I\+DI import for beat detection. (\href{https://code.soundsoftware.ac.uk/projects/beatroot-vamp/repository}{\tt https\+://code.\+soundsoftware.\+ac.\+uk/projects/beatroot-\/vamp/repository})
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsection*{Building}
+
+{\bfseries Read the developer handbook for a \href{https://musescore.org/en/developers-handbook/compilation}{\tt complete build walkthrough} and a list of dependencies.}
+
+\subsubsection*{Getting sources}
+
+If using git to download repo of entire code history, type\+: \begin{DoxyVerb}git clone https://github.com/musescore/MuseScore.git
+cd MuseScore
+\end{DoxyVerb}
+
+
+Else can just download the latest source release tarball from \href{https://github.com/musescore/MuseScore/releases,}{\tt https\+://github.\+com/musescore/\+Muse\+Score/releases,} and then from your download directory type\+: \begin{DoxyVerb}tar xzf MuseScore-x.x.x.tar.gz
+cd MuseScore-x.x.x
+\end{DoxyVerb}
+
+
+\subsubsection*{Release Build}
+
+To compile Muse\+Score, type\+: \begin{DoxyVerb}make release
+\end{DoxyVerb}
+
+
+If something goes wrong, then remove the whole build subdirectory with {\ttfamily make clean} and start new with {\ttfamily make release}.
+
+\subsubsection*{Running}
+
+To start Muse\+Score, type\+: \begin{DoxyVerb}./build.release/mscore/mscore
+\end{DoxyVerb}
+
+
+The Start Center window will appear on every invocation, until you disable that setting via the \char`\"{}\+Preferences\char`\"{} dialog.
+
+\subsubsection*{Installing}
+
+To install to default prefix using root user, type\+: \begin{DoxyVerb}sudo make install
+\end{DoxyVerb}
+
+
+\subsubsection*{Debug Build}
+
+A debug version can be built by doing {\ttfamily make debug} instead of {\ttfamily make release}.
+
+To run the debug version, type\+: \begin{DoxyVerb}./build.debug/mscore/mscore
+\end{DoxyVerb}
+
+
+\subsubsection*{Testing}
+
+See /mtest/\+R\+E\+A\+D\+ME.md \char`\"{}mtest/\+R\+E\+A\+D\+M\+E.\+md\char`\"{} or \href{https://musescore.org/en/developers-handbook/testing}{\tt https\+://musescore.\+org/en/developers-\/handbook/testing} for instructions on how to run the test suite. 

@@ -93,10 +93,20 @@ void Stem::layout()
             else {                              // non-TAB
                   // move stem start to note attach point
                   Note* n  = up() ? chord()->downNote() : chord()->upNote();
-                  y1      += (up() ? n->stemUpSE().y() : n->stemDownNW().y());
+                  if (up()) {
+                      y1 += n->stemUpSE().y();
+                      if (n->userMirror() == MScore::DirectionH::RIGHT) {
+                          y1 += 4.7;
+                      }
+                  } else {
+                      y1 += n->stemDownNW().y();
+                      if (n->userMirror() == MScore::DirectionH::LEFT) {
+                          y1 -= 4.7;
+                      }
+                  }
                   rypos() = n->rypos();
                   }
-            }
+      }
 
       qreal lw5 = _lineWidth * .5;
 
