@@ -97,6 +97,43 @@ Kept as an example of how to integrate with a complex synthesizer.
 ## Building
 **Read the developer handbook for a [complete build walkthrough](https://musescore.org/en/developers-handbook/compilation) and a list of dependencies.**
 
+**Ubuntu Only** 
+Run the following commands in Terminal 
+
+    sudo apt-get install git cmake g++
+
+    sudo apt-get install libasound2-dev portaudio19-dev libmp3lame-dev libsndfile1-dev libportmidi-dev
+
+    sudo apt-get install libssl-dev libpulse-dev libfreetype6-dev libfreetype6
+
+    sudo apt-get install libdrm-dev libgl1-mesa-dev libegl1-mesa-dev
+
+    sudo apt-get install libqt4-dev qtbase5-dev qttools5-dev qttools5-dev-tools qtquick1-5-dev \
+    qtscript5-dev libqt5xmlpatterns5-dev libqt5svg5-dev libqt5webkit5-dev
+
+After running the last command, install Qt at  http://qt-project.org/
+
+Move the installer to your Home directory and open a terminal window (Ctrl+Alt+T on Ubuntu).
+
+
+Give the installer execute permissions:
+
+     sudo chmod +x filename.run
+
+
+Run the installer ("sudo" is not required if you choose to install to your Home directory in Step 5):
+     
+     sudo ./filename.run
+
+Install Qt 5.8 or later, Musescore also does not yet support version 5.10.
+
+Run the following commands to verify the installation of Qt
+
+     echo 'export PATH=/opt/Qt/5.8/gcc_64/bin:$PATH' >> ~/.bashrc
+     source ~/.bashrc
+     qmake -version
+
+ 
 ### Getting sources
 If using git to download repo of entire code history, type:
 
@@ -109,9 +146,11 @@ Else can just download the latest source release tarball from https://github.com
     cd MuseScore-x.x.x
 
 ### Release Build
-To compile MuseScore, type:
+To compile MuseScore, type:.
 
-    make release
+    make revision
+    make 
+    sudo make install
 
 If something goes wrong, then remove the whole build subdirectory with `make clean` and start new with `make release`.
 
