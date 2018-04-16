@@ -94,14 +94,16 @@ void Stem::layout()
                   // move stem start to note attach point
                   Note* n  = up() ? chord()->downNote() : chord()->upNote();
                   if (up()) {
-                      y1 += n->stemUpSE().y();
                       if (n->userMirror() == MScore::DirectionH::RIGHT) {
-                          y1 += 4.7;
+                          y1 += n->stemDownNW().y();
+                      } else {
+                          y1 += n->stemUpSE().y();
                       }
                   } else {
-                      y1 += n->stemDownNW().y();
                       if (n->userMirror() == MScore::DirectionH::LEFT) {
-                          y1 -= 4.7;
+                          y1 += n->stemUpSE().y();
+                      } else {
+                          y1 += n->stemDownNW().y();
                       }
                   }
                   rypos() = n->rypos();
