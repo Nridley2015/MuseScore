@@ -98,7 +98,7 @@ Kept as an example of how to integrate with a complex synthesizer.
 **Read the developer handbook for a [complete build walkthrough](https://musescore.org/en/developers-handbook/compilation) and a list of dependencies.**
 
 **Ubuntu Only** 
-Run the following commands in Terminal 
+Run the following commands in Terminal (Note you must have at least 2GB RAM)
 
     sudo apt-get install git cmake g++
 
@@ -135,11 +135,16 @@ Run the following commands to verify the installation of Qt
 
  
 ### Getting sources
-If using git to download repo of entire code history, type:
+If using git to download repo of entire code history of master MuseScore, type:
 
     git clone https://github.com/musescore/MuseScore.git
     cd MuseScore
 
+If using git to download repo of entire code history of this branch, type:
+
+    git clone https://github.com/Nridley2015/MuseScore
+    cd MuseScore
+    
 Else can just download the latest source release tarball from https://github.com/musescore/MuseScore/releases, and then from your download directory type:
 
     tar xzf MuseScore-x.x.x.tar.gz
@@ -157,21 +162,19 @@ If something goes wrong, then remove the whole build subdirectory with `make cle
 ### Running
 To start MuseScore, type:
 
-    ./build.release/mscore/mscore
+    mscore
 
 The Start Center window will appear on every invocation, until you disable that setting via the "Preferences" dialog.
 
-### Installing
-To install to default prefix using root user, type:
-
-    sudo make install
-
-### Debug Build
-A debug version can be built by doing `make debug` instead of `make release`.
-
-To run the debug version, type:
-
-    ./build.debug/mscore/mscore
-
 ### Testing
 See [mtest/README.md](/mtest/README.md) or https://musescore.org/en/developers-handbook/testing for instructions on how to run the test suite.
+
+## Deleting Notes
+Deleting notes in MuseScore replaces the note with a rest in its place.
+The following are ways to delete notes:
+
+1. Select a note by clicking on it. Then press the DEL key to delete it. 
+2. In note entry mode, delete the last entered note by hitting Backspace.
+3. Right click a note, and select delete.
+
+You can also place a rest in place of a note and it performs the same function. 
