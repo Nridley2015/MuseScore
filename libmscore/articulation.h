@@ -128,7 +128,6 @@ class Articulation final : public Element {
       bool isStaccato() const;
       bool isAccent() const;
       bool isLuteFingering() const;
-      bool hasChanged = false;
 
       void doAutoplace();
       };
