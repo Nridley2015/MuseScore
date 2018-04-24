@@ -98,7 +98,7 @@ Kept as an example of how to integrate with a complex synthesizer.
 **Read the developer handbook for a [complete build walkthrough](https://musescore.org/en/developers-handbook/compilation) and a list of dependencies.**
 
 **Ubuntu Only** 
-Run the following commands in Terminal (Note you must have at least 2GB RAM)
+Run the following commands in Terminal (Note you must have at least 2GB RAM and 20GB Disk Space)
 
     sudo apt-get install git cmake g++
 
