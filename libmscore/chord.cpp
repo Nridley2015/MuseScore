@@ -3234,8 +3234,9 @@ Shape Chord::shape() const
 
 void Chord::layoutArticulations()
       {
-      if (_articulations.empty())
+      if (_articulations.empty()){
             return;
+     }
       StaffType* staffType = staff()->staffType(tick());
       qreal mag            = (staffType->small() ? score()->styleD(StyleIdx::smallStaffMag) : 1.0) * staffType->userMag();
       qreal _spatium       = score()->spatium() * mag;
@@ -3245,8 +3246,15 @@ void Chord::layoutArticulations()
       //    determine direction
       //    place tenuto and staccato
       //
-
+       
+	
       for (Articulation* a : _articulations) {
+	   if(this->hasArt == true){
+		_articulations.clear();
+		this->hasArt = false;
+            	return;
+            }
+	    this->hasArt = true;
             if (a->direction() != Direction::AUTO)
                   a->setUp(a->direction() == Direction::UP);
             else {
@@ -3330,7 +3338,9 @@ void Chord::layoutArticulations()
                   }
             a->setPos(x, y);
             measure()->staffShape(staffIdx()).add(a->shape().translated(segment()->pos()));
+            
             }
+	
       }
 
 //---------------------------------------------------------
@@ -3341,6 +3351,7 @@ void Chord::layoutArticulations()
 
 void Chord::layoutArticulations2()
       {
+
       if (_articulations.empty())
             return;
       qreal _spatium  = spatium();
@@ -3384,6 +3395,7 @@ void Chord::layoutArticulations2()
       //
       qreal distance1 = score()->styleP(StyleIdx::propertyDistanceHead);
       for (Articulation* a : _articulations) {
+	    
             ArticulationAnchor aa = a->anchor();
             if (aa != ArticulationAnchor::CHORD && aa != ArticulationAnchor::TOP_CHORD && aa != ArticulationAnchor::BOTTOM_CHORD)
                   continue;

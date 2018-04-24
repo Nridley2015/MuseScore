@@ -99,6 +99,7 @@ class Chord final : public ChordRest {
       Chord &operator=(const Chord&) = delete;
 
       virtual Chord* clone() const       { return new Chord(*this, false); }
+      virtual Chord* clone1(Chord* temp) const       { return new Chord(*temp, false); }
       virtual Element* linkedClone()     { return new Chord(*this, true); }
       virtual void undoUnlink() override;
 
@@ -226,6 +227,7 @@ class Chord final : public ChordRest {
       virtual QString accessibleExtraInfo() const override;
 
       virtual Shape shape() const override;
+      bool hasArt = false;
       };
 
 
