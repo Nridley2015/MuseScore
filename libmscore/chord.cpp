@@ -3249,12 +3249,12 @@ void Chord::layoutArticulations()
        
 	
       for (Articulation* a : _articulations) {
-	   if(this->hasArt == true){
+	   if(this->hasArticulations == true){
 		_articulations.clear();
-		this->hasArt = false;
+		this->hasArticulations = false;
             	return;
             }
-	    this->hasArt = true;
+	    this->hasArticulations = true;
             if (a->direction() != Direction::AUTO)
                   a->setUp(a->direction() == Direction::UP);
             else {

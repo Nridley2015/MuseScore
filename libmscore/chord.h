@@ -227,7 +227,7 @@ class Chord final : public ChordRest {
       virtual QString accessibleExtraInfo() const override;
 
       virtual Shape shape() const override;
-      bool hasArt = false;
+      bool hasArticulations = false;
       };
 
 
